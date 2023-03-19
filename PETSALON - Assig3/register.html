@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d700f962b2.js" crossorigin="anonymous"></script>
+    <title>Pet Salon</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> The fashion shop</h1>
+        <nav>
+            <a href="index.html"> Home </a>
+            <a href="services.html"> Services </a>
+            <a href="about.html"> About </a>
+            <a href="register.html"> Register </a>
+        </nav>
+
+        <img src="img/dog.jfif"alt="my picture">
+        <img src="img/bird.jfif"alt="my picture">
+        <img src="img/cat.jfif" alt="my picture">
+
+
+    </header>
+
+    <h2> register a new pet</h2>
+    <p> pets in the salon = <span id="numberOfPets"></span></p>
+
+    <div class = "container">
+        <div class="mb-3">
+            <label class="form-label"> Name </label>
+            <input type="text" class = "form-control" id="txtName">
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> Age </label>
+            <input type="number" class = "form-control" id="txtAge">
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> Gender </label>
+            <input type="text" class = "form-control" id="txtGender">
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> Service </label>
+            <select class="form-control" id="txtService">
+                <option value=""disabled selected> -- Select an option -- </option>
+                <option value="grooming"> Grooming </option>
+                <option value="nails"> Nails cut </option>
+                <option value="vaccine"> Vaccines </option>
+            </select>
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> Type </label>
+            <select class="form-control" id="txtType">
+                <option value=""disabled selected> -- Select an option -- </option>
+                <option value="cat"> Cat </option>
+                <option value="dog"> Dog [go to dog's breed] </option>
+                <option value="bird"> Bird </option>
+                <option value="other"> Other </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> Dog's Breed </label>
+            <select class="form-control" id="txtBreed">
+                <option value=""disabled selected> -- Select an option -- </option>
+                <option value="amerBulldog"> American Bulldog </option>
+                <option value="gerSheperd"> German Sheperd </option>
+                <option value="borCollie"> Border Collie </option>
+                <option value="other"> Other </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> Owner's Name  </label>
+            <input type="text" class = "form-control" id="txtOwner">
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> Owner's Phone Number  </label>
+            <input type="text" class = "form-control" id="txtPhone">
+        </div>
+
+
+    </div>
+
+    <button class="btn btn-light" onclick="register();"> Register </button>
+
+    <div id="pets" class="pets">
+        
+    </div>
+
+
+    <table>
+        <thead>
+            <tr style="background-color: #9f9e9b">
+                <th> Name </th>
+                <th> Age </th>
+                <th> Gender </th>
+                <th> Service </th>
+                <th> Type </th>
+                <th> Breed </th>
+                <th> Owner </th>
+                <th> Phone </th>
+
+            </tr>
+        </thead>
+        
+        <tbody id="petTable">
+            <tr>
+                <td> </td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <div id="information">
+        </div>
+    </footer>
+    
+    <script src="script/register.js"></script>
+    <script src="script/displayPets.js"></script>
+    
+</body>
+</html>
